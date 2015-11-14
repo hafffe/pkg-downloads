@@ -1,9 +1,9 @@
 {
   "name": "pkg-downloads",
-  "version": "0.0.1",
-  "description": "My stunning module",
+  "version": "0.0.2",
+  "description": "check total downloads of a npm package",
   "license": "MIT",
-  "repository": "alonalon/npm-statics",
+  "repository": "alonalon/pkg-downloads",
   "author": {
     "name": "alonalon",
     "email": "aronhafner@gmail.com",
