@@ -1,0 +1,48 @@
+{
+  "name": "pkg-downloads",
+  "version": "0.0.1",
+  "description": "My stunning module",
+  "license": "MIT",
+  "repository": "alonalon/npm-statics",
+  "author": {
+    "name": "alonalon",
+    "email": "aronhafner@gmail.com",
+    "url": "github.com/alonalon"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "npm",
+    "pkg",
+    "package",
+    "download-counts",
+    "downloads"
+  ],
+  "dependencies": {
+    "got": "^5.1.0",
+    "log-symbols": "^1.0.2",
+    "meow": "^3.4.2",
+    "pinkie-promise": "^2.0.0",
+    "registry-url": "^3.0.3"
+  },
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "xo": "^0.10.0"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
