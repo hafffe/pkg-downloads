@@ -9,9 +9,9 @@ const cli = meow([
 	'  $ pkg-downloads <day|week|month> <name>',
 	'',
 	'Examples',
-	'  $ pkg-downloads chalk',
+	'  $ pkg-downloads day chalk',
 	'  ${logSymbols.info} 10818357',
-	'  $ pkg-downloads elephants',
+	'  $ pkg-downloads week elephants',
 	'  {logSymbols.error} Not found '
 ]);
 
@@ -24,5 +24,5 @@ if (!period || !name) {
 }
 
 pkgDownloads(period, name).then(res => {
-	console.log(res.err ? `${logSymbols.error} ` + res.msg : `${logSymbols.info} ` + res.downloads + ` ${period}`);
+	console.log(res.err ? `${logSymbols.error} ` + res.msg : `${logSymbols.info} ` + res.downloads + ` downloads ${period}`);
 });

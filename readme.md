@@ -1,6 +1,6 @@
 # pkg-downloads [![Build Status](https://travis-ci.org/alonalon/pkg-downloads.svg?branch=master)](https://travis-ci.org/alonalon/pkg-downloads)
 
-> Check totalt downloads of a package during a specific time period
+> Check total downloads of a package during a specific time period
 
 
 ## Install
@@ -13,7 +13,7 @@ $ npm install --save pkg-downloads
 ## Usage
 
 ```js
-pkgDownloads('time', 'name').then(res => {
+pkgDownloads('period', 'name').then(res => {
 	console.log(res);
 });
 

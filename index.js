@@ -12,13 +12,18 @@ module.exports = function (period, name) {
 		return Promise.reject(new Error('Package name required'));
 	}
 
+	if (period.indexOf('last-') === -1) {
+		const last = 'last-';
+		period = last.concat(period);
+	}
+
 	const url = `${api}${period}/${name}`;
 
 	return got(url).then(function (res) {
 		const result = JSON.parse(res.body);
 
 		return {
-			err: result.error ? true : false,
+			err: Boolean(result.error),
 			downloads: result.downloads ? result.downloads : null,
 			msg: result.downloads ? null : 'Package couldn\'t be found'
 		};
