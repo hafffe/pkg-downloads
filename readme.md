@@ -1,65 +1,41 @@
-# npm-statics [![Build Status](https://travis-ci.org/alonalon/npm-statics.svg?branch=master)](https://travis-ci.org/alonalon/npm-statics)
+# pkg-downloads [![Build Status](https://travis-ci.org/alonalon/pkg-downloads.svg?branch=master)](https://travis-ci.org/alonalon/pkg-downloads)
 
-> My stunning module
+> Check totalt downloads of a package during a specific time period
 
 
 ## Install
 
 ```
-$ npm install --save npm-statics
+$ npm install --save pkg-downloads
 ```
 
 
 ## Usage
 
 ```js
-const npmStatics = require('npm-statics');
+pkgDownloads('time', 'name').then(res => {
+	console.log(res);
+});
 
-npmStatics('unicorns');
-//=> 'unicorns & rainbows'
 ```
-
-
-## API
-
-### npmStatics(input, [options])
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
 
 ## CLI
 
 ```
-$ npm install --global npm-statics
+$ npm install --global pkg-downloads
 ```
 
 ```
-$ npm-statics --help
+$ pkg-downloads --help
 
   Usage
-    npm-statics [input]
-
-  Options
-    --foo  Lorem ipsum. [Default: false]
+  $ pkg-downloads <day|week|month> <name>
 
   Examples
-    $ npm-statics
-    unicorns & rainbows
-    $ npm-statics ponies
-    ponies & rainbows
+    $ pkg-downloads chalk
+    ${logSymbols.info} 10818357
+    $ pkg-downloads elephants
+    {logSymbols.error} Not found
 ```
 
 
