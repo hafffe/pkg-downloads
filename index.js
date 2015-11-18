@@ -17,7 +17,9 @@ module.exports = function (period, name) {
 		period = last.concat(period);
 	}
 
-	var url = `${api}${period}/${name}`;
+	var url = api + period + name;
+
+	`${api}${period}/${name}`;
 
 	return got(url).then(function (res) {
 		var result = JSON.parse(res.body);
