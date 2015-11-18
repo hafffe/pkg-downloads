@@ -31,7 +31,7 @@ module.exports = function (period, name) {
 		if (err.statusCode === 404) {
 			err.message = 'module doesn\'t exist';
 		}
-		
+
 		throw err;
 	});
 };
