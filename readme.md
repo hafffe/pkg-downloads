@@ -15,6 +15,7 @@ $ npm install --save pkg-downloads
 ```js
 pkgDownloads('period', 'name').then(res => {
 	console.log(res);
+	//=> { downloads: 7083, start: '2015-11-11', end: '2015-11-17', package: 'ava' }
 });
 
 ```

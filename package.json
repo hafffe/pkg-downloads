@@ -1,6 +1,6 @@
 {
   "name": "pkg-downloads",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "check total downloads of a npm package",
   "license": "MIT",
   "repository": "alonalon/pkg-downloads",
@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "xo && ava"

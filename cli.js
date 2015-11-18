@@ -10,19 +10,18 @@ const cli = meow([
 	'',
 	'Examples',
 	'  $ pkg-downloads day chalk',
-	'  ${logSymbols.info} 10818357',
+	'  ${logSymbols.info} result',
 	'  $ pkg-downloads week elephants',
-	'  {logSymbols.error} Not found '
+	'  {logSymbols.error} error message'
 ]);
 
-const period = 'last-' + cli.input[0];
-const name = cli.input[1];
-
-if (!period || !name) {
-	console.error('Period and Username had not been specified');
+if (cli.input.length < 2) {
+	console.error('Expected two strings');
 	process.exit(1);
 }
 
-pkgDownloads(period, name).then(res => {
-	console.log(res.err ? `${logSymbols.error} ` + res.msg : `${logSymbols.info} ` + res.downloads + ` downloads ${period}`);
+pkgDownloads(cli.input[0], cli.input[1]).then(res => {
+	console.log(`${logSymbols.info} ` + res.downloads + ` downloads during ` + res.start + ' - ' + res.end);
+}).catch(function (err) {
+	console.log(`${logSymbols.error} ` + err);
 });

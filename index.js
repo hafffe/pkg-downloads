@@ -1,7 +1,7 @@
 'use strict';
-const got = require('got');
-const Promise = require('pinkie-promise');
-const api = 'https://api.npmjs.org/downloads/point/';
+var got = require('got');
+var Promise = require('pinkie-promise');
+var api = 'https://api.npmjs.org/downloads/point/';
 
 module.exports = function (period, name) {
 	if (!(typeof period === 'string' && period.length !== 0)) {
@@ -13,25 +13,25 @@ module.exports = function (period, name) {
 	}
 
 	if (period.indexOf('last-') === -1) {
-		const last = 'last-';
+		var last = 'last-';
 		period = last.concat(period);
 	}
 
-	const url = `${api}${period}/${name}`;
+	var url = `${api}${period}/${name}`;
 
 	return got(url).then(function (res) {
-		const result = JSON.parse(res.body);
+		var result = JSON.parse(res.body);
 
-		return {
-			err: Boolean(result.error),
-			downloads: result.downloads ? result.downloads : null,
-			msg: result.downloads ? null : 'Package couldn\'t be found'
-		};
+		if (result.error) {
+			return Promise.reject(new Error('Package info couldn\'t be fetched'));
+		}
+
+		return result;
 	}).catch(function (err) {
 		if (err.statusCode === 404) {
 			err.message = 'module doesn\'t exist';
 		}
-
+		
 		throw err;
 	});
 };
