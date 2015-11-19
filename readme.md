@@ -33,7 +33,7 @@ $ pkg-downloads --help
   $ pkg-downloads <day|week|month> <name>
 
   Examples
-    $ pkg-downloads chalk
+    $ pkg-downloads week chalk
     ${logSymbols.info} 10818357
     $ pkg-downloads elephants
     {logSymbols.error} Not found
