@@ -36,7 +36,7 @@ $ pkg-downloads --help
     $ pkg-downloads week chalk
     ${logSymbols.info} 10818357
     $ pkg-downloads elephants
-    {logSymbols.error} Not found
+    ${logSymbols.error} Not found
 ```
 
 
