@@ -26,10 +26,10 @@ module.exports = function (period, name) {
 			return Promise.reject(new Error('Package info couldn\'t be fetched'));
 		}
 
-		return result;
+		return result.downloads;
 	}).catch(function (err) {
 		if (err.statusCode === 404) {
-			err.message = 'module doesn\'t exist';
+			err.message = 'Module doesn\'t exist';
 		}
 
 		throw err;

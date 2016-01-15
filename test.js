@@ -1,7 +1,8 @@
 import test from 'ava';
-import fn from './';
+import pkgDownloads from './';
 
-test('should return object', async t => {
-	t.is(typeof await fn('week', 'ava'), 'object');
-	t.end();
+test('result should be a number', t => {
+	return pkgDownloads('week', 'ava').then(result => {
+		t.is(typeof result, 'number');
+	});
 });
