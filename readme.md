@@ -9,36 +9,32 @@
 $ npm install --save pkg-downloads
 ```
 
-
 ## Usage
 
 ```js
-pkgDownloads('period', 'name').then(res => {
+const pkgDownloads = require('pkg-downloads');
+
+pkgDownloads('week', 'chalk').then(res => {
 	console.log(res);
-	//=> { downloads: 7083, start: '2015-11-11', end: '2015-11-17', package: 'ava' }
+	//=> {2948939}
 });
-
 ```
 
-## CLI
+## API
 
-```
-$ npm install --global pkg-downloads
-```
+### pkgDownloadsCli(period, name)
 
-```
-$ pkg-downloads --help
+#### period
 
-  Usage
-  $ pkg-downloads <day|week|month> <name>
+Type: `string`
 
-  Examples
-    $ pkg-downloads week chalk
-    ${logSymbols.info} 10818357
-    $ pkg-downloads elephants
-    ${logSymbols.error} Not found
-```
+Choose by day|week|month.
 
+#### name
+
+Type: `string`
+
+Name of the npm package.
 
 ## License
 
