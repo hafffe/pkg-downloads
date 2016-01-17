@@ -3,8 +3,10 @@ var got = require('got');
 var Promise = require('pinkie-promise');
 var api = 'https://api.npmjs.org/downloads/point/';
 
-module.exports = function (period, name) {
-	if (!(typeof period === 'string' && period.length !== 0)) {
+module.exports = function (name, opts) {
+	opts = opts || {};
+
+	if (!(typeof opts.period === 'string' && opts.period.length !== 0)) {
 		return Promise.reject(new Error('Time period is required'));
 	}
 
@@ -12,12 +14,12 @@ module.exports = function (period, name) {
 		return Promise.reject(new Error('Package name required'));
 	}
 
-	if (period.indexOf('last-') === -1) {
+	if (opts.period.indexOf('last-') === -1) {
 		var last = 'last-';
-		period = last.concat(period);
+		opts.period = last.concat(opts.period);
 	}
 
-	var url = api + period + '/' + name;
+	var url = api + opts.period + '/' + name;
 
 	return got(url).then(function (res) {
 		var result = JSON.parse(res.body);

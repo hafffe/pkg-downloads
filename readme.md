@@ -14,7 +14,7 @@ $ npm install --save pkg-downloads
 ```js
 const pkgDownloads = require('pkg-downloads');
 
-pkgDownloads('week', 'chalk').then(res => {
+pkgDownloads('chalk', {period: 'week'}).then(res => {
 	console.log(res);
 	//=> {2948939}
 });
@@ -22,19 +22,21 @@ pkgDownloads('week', 'chalk').then(res => {
 
 ## API
 
-### pkgDownloadsCli(period, name)
-
-#### period
-
-Type: `string`
-
-Choose by day|week|month.
+### pkgDownloadsCli(name, options)
 
 #### name
 
 Type: `string`
 
 Name of the npm package.
+
+#### options
+
+##### period
+
+Type: `string`
+
+Choose by day|week|month.
 
 ## License
 
