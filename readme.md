@@ -9,6 +9,7 @@
 $ npm install --save pkg-downloads
 ```
 
+
 ## Usage
 
 ```js
@@ -16,16 +17,18 @@ const pkgDownloads = require('pkg-downloads');
 
 pkgDownloads('chalk', {period: 'week'}).then(res => {
 	console.log(res);
-	//=> {2948939}
+	//=> 2948939
 });
 ```
 
+
 ## API
 
-### pkgDownloadsCli(name, options)
+### pkgDownloads(name, options)
 
 #### name
 
+*Required*  
 Type: `string`
 
 Name of the npm package.
@@ -34,9 +37,11 @@ Name of the npm package.
 
 ##### period
 
+*Required*  
 Type: `string`
 
-Choose by day|week|month.
+Choose by `day`, `week` or `month`.
+
 
 ## License
 
