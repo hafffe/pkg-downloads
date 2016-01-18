@@ -42,6 +42,9 @@ Type: `string`
 
 Choose by `day`, `week` or `month`.
 
+## Related
+[pkg-downloads-cli](https://github.com/alonalon/pkg-downloads-cli) - CLI for this module.
+
 
 ## License
 
