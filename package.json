@@ -1,6 +1,6 @@
 {
   "name": "pkg-downloads",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check total downloads of a npm package",
   "license": "MIT",
   "repository": "alonalon/pkg-downloads",
