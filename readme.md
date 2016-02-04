@@ -28,7 +28,7 @@ pkgDownloads('chalk', {period: 'week'}).then(res => {
 
 #### name
 
-*Required*  
+*Required*
 Type: `string`
 
 Name of the npm package.
@@ -37,7 +37,7 @@ Name of the npm package.
 
 ##### period
 
-*Required*  
+*Required*
 Type: `string`
 
 Choose by `day`, `week` or `month`.
