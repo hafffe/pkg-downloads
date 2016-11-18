@@ -1,6 +1,6 @@
 'use strict';
-var got = require('got');
-var Promise = require('pinkie-promise');
+const got = require('got');
+const Promise = require('pinkie-promise');
 
 module.exports = function (name, opts) {
 	opts = opts || {};
@@ -13,9 +13,9 @@ module.exports = function (name, opts) {
 		return Promise.reject(new Error('Time period is required'));
 	}
 
-	var api = 'https://api.npmjs.org/downloads/point/';
-	var period = 'last-' + opts.period;
-	var url = api + period + '/' + name;
+	const api = 'https://api.npmjs.org/downloads/point/';
+	const period = 'last-' + opts.period;
+	const url = api + period + '/' + name;
 
 	return got(url, {json: true}).then(function (res) {
 		if (res.body.error) {
