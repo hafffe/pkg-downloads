@@ -1,41 +1,40 @@
 {
-  "name": "pkg-downloads",
-  "version": "2.0.2",
-  "description": "Check total downloads of a npm package",
-  "license": "MIT",
-  "repository": "alonalon/pkg-downloads",
-  "author": {
-    "name": "alonalon",
-    "email": "aronhafner@gmail.com",
-    "url": "github.com/alonalon"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "npm",
-    "pkg",
-    "package",
-    "download-counts",
-    "downloads"
-  ],
-  "dependencies": {
-    "got": "^5.1.0",
-    "pinkie-promise": "^2.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "ignores": [
-      "test.js"
-    ]
-  }
+	"name": "pkg-downloads",
+	"version": "2.0.2",
+	"description": "Check total downloads of a npm package",
+	"license": "MIT",
+	"repository": "alonalon/pkg-downloads",
+	"author": {
+		"name": "alonalon",
+		"email": "aronhafner@gmail.com",
+		"url": "github.com/alonalon"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"npm",
+		"pkg",
+		"package",
+		"download-counts",
+		"downloads"
+	],
+	"dependencies": {
+		"got": "^5.1.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	},
+	"xo": {
+		"ignores": [
+		"test.js"
+		]
+	}
 }
