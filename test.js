@@ -6,5 +6,9 @@ test('result should be a number', async t => {
 });
 
 test('package not found', async t => {
-	await t.throws(m('avaasjdaskd', {period: 'week'}), `Module doesn't exist`);
+	await t.throws(m('elephants', {period: 'week'}));
+});
+
+test('wrong period', async t => {
+	await t.throws(m('ava', {period: 'weeks'}));
 });
