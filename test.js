@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 test('result should be a number', async t => {
 	t.is(typeof await m('ava', {period: 'week'}), 'number');

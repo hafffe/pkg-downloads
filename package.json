@@ -26,15 +26,10 @@
 		"downloads"
 	],
 	"dependencies": {
-		"got": "^5.1.0"
+		"got": "^7.1.0"
 	},
 	"devDependencies": {
 		"ava": "*",
 		"xo": "*"
-	},
-	"xo": {
-		"ignores": [
-			"test.js"
-		]
 	}
 }
