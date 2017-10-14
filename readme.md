@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save pkg-downloads
+$ npm install pkg-downloads
 ```
 
 
